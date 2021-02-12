@@ -1,0 +1,31 @@
+<section id="loader" *ngIf="isLoading">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+
+</section>
+
+<section class="my-5" *ngIf="! isLoading">
+
+    
+    <div class="row">
+        <div class="col-sm-4">
+            <img [src]=" movie.large_cover_image " width="100%" alt="">
+        </div>
+
+        <div class="col-sm-8">
+            <h3> {{ movie.title_english }} </h3>
+            <p> {{movie.description_full}} </p>
+            
+            <a  *ngFor="let link of movie.torrents" [href]="link.url" download type="button" class="btn btn-outline-danger" style="margin-right: 15px;">{{link.quality}} - {{link.size}} </a>
+
+            <br/>
+
+            <button (click)="addToWatchList()" class="btn btn-primary"> ADD TO WATCH LIST </button>
+
+        </div>
+        
+        
+    </div>
+
+</section>

@@ -1,0 +1,8 @@
+<div class="card movie-card" [routerLink]=" '/movie/'+id " style="width: 100%; position:relative">
+    <img class="card-img-top" [src]="byPass()" alt="Card image cap">
+    <div class="card-body block-toshow" style="position: absolute;">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text"> {{ gendre }} </p>
+      
+    </div>
+  </div>

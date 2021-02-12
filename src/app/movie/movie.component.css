@@ -1,0 +1,16 @@
+.block-toshow{
+    display: none;
+    color: white;
+}
+
+.movie-card:hover > img {
+    filter: brightness(0.7);
+}
+
+.movie-card:hover >  .block-toshow {
+    display: block;
+}
+
+.movie-card{
+    cursor: pointer;
+}

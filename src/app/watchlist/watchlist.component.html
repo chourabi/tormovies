@@ -1,0 +1,11 @@
+
+<section id="movies-list">
+
+    <div class="row">
+        <div class="col-sm-12 col-md-3" *ngFor="let m of movies" >
+
+            <app-movie imgURL=" {{ m.large_cover_image }} "  id="{{m.id}}" gendre="{{ m.genres }}" title=" {{m.title_english}} "></app-movie>
+        </div>
+    </div>
+
+</section>
